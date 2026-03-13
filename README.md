@@ -1,2 +1,2 @@
 # cs
-Cache simulator implemented in C that models how cache memory operates in a computer system. It processes memory access traces to determine cache hits and misses, while supporting configurable parameters such as cache size, block size, and associativity, and reports performance statistics like hit rate and miss rate.
+CPU cache simulator in C that models a 16KB 4-way set-associative write-through cache with 64 sets and random replacement on a 32-bit system, backed by 4MB main memory. It supports basic read/write operations to analyze cache hits, misses, and thrashing.
