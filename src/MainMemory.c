@@ -37,11 +37,13 @@ void MainMemory_Destroy(MainMemory* memory) {
 }
 
 void MainMemory_Read(MainMemory* memory, uint32_t startAddress, uint8_t size, uint8_t* destination) {
+    printf("Reading from main memory (address: 0x%x)\n", startAddress);
     // Read the requested amount of memory and copy to destination
     memcpy(destination, &memory->m_memory[startAddress], size);
 }
 
 void MainMemory_Write(MainMemory* memory, uint32_t startAddress, uint8_t size, uint8_t* source) {
+    printf("Writing to main memory (address: 0x%x)\n", startAddress);
     // copy the requested amount of memory from the source main memory
     memcpy(&memory->m_memory[startAddress], source, size);
 }

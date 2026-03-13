@@ -89,6 +89,7 @@ uint32_t Cache_Read(Cache *cache, uint32_t address, MainMemory *mainMemory)
         // Reinterpret the memory as a 32-bit integer
         uint32_t value;
         memcpy(&value, &line->data[addressParts.byteOffset], sizeof(value));
+        printf("Reading from cache (address: 0x%x), set: %d, tag: 0x%x\n", address, addressParts.setIndex, addressParts.tag);
         return value;
     }
     else
@@ -111,6 +112,7 @@ uint32_t Cache_Read(Cache *cache, uint32_t address, MainMemory *mainMemory)
         // Return 32-bit value from the cache line bytes
         uint32_t value;
         memcpy(&value, &newLine->data[addressParts.byteOffset], sizeof(value));
+        printf("Reading from cache (address: 0x%x), set: %d, tag: 0x%x\n", address, addressParts.setIndex, addressParts.tag);
         return value;
     }
 }
@@ -128,6 +130,7 @@ void Cache_Write(Cache *cache, uint32_t address, uint32_t data)
     CacheLine *line = CacheSet_FindLine(&cache->sets[addressParts.setIndex], addressParts.tag);
     if (line != NULL)
     {
+        printf("Writing to cache (address: 0x%x), set: %d, tag: 0x%x\n", address, addressParts.setIndex, addressParts.tag);
         // Cache hit: write the data to the cache line
         memcpy(&line->data[addressParts.byteOffset], &data, sizeof(data));
     }
