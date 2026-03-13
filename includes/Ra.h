@@ -11,7 +11,7 @@ typedef struct Ra Ra;
 void SetWays(uint8_t numOfWays);
 uint8_t GetVictim();
 
-uint8_t ways = 0;
+extern uint8_t ways;
 
 #endif /* RA_H */
 

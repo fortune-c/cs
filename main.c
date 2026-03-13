@@ -52,6 +52,6 @@ int main(void) {
 
     MainMemory_Print(memorySystem.mainMemory);
 
-    system("pause");
+    MemorySystem_Destroy(&memorySystem);
     return 0;
 }

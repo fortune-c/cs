@@ -1,4 +1,7 @@
 #include "Ra.h"
+#include <stdlib.h>
+
+uint8_t ways = 0;
 
 void SetWays(uint8_t numOfWays) {
     ways = numOfWays;

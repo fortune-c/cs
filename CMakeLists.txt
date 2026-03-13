@@ -1,13 +1,12 @@
-cmake_minimum_required(VERSION 4.1)
+cmake_minimum_required(VERSION 3.16)
 project(cs C)
 
 set(CMAKE_C_STANDARD 11)
-add_executable(cs main.c
+include_directories(includes)
+add_executable(cs
         main.c
         src/MainMemory.c
-        includes/MainMemory.h
         src/Ra.c
-        includes/Ra.h
         src/Cache.c
-        includes/Cache.h
-        )
+        src/MemorySystem.c
+)

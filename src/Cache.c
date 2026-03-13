@@ -1,5 +1,6 @@
 #include "../includes/Cache.h"
 #include <stddef.h>
+#include <stdio.h>
 #include <string.h>
 
 struct CacheLine;
