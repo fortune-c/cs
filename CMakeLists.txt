@@ -5,7 +5,9 @@ set(CMAKE_C_STANDARD 11)
 add_executable(cs main.c
         main.c
         src/MainMemory.c
-        include/MainMemory.h
+        includes/MainMemory.h
         src/Ra.c
-        include/Ra.h
+        includes/Ra.h
+        src/Cache.c
+        includes/Cache.h
         )
